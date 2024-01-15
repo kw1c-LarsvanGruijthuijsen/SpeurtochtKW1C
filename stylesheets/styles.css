@@ -1,0 +1,21 @@
+.custom-header {
+    background-color: #0E85C7;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.logo {
+    color: #ED302F;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+}
