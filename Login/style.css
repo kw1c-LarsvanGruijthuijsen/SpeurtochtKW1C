@@ -5,7 +5,7 @@
 
 body {
   font-size: 120%;
-  background: #F8F8FF;
+  background: #FFFFFF;
 }
 
 .header-txt{
@@ -37,9 +37,9 @@ form, .content {
   width: 30%;
   margin: 0px auto;
   padding: 20px;
-  border: 1px solid #B0C4DE;
   background: white;
   border-radius: 0px 0px 10px 10px;
+  color:#0E85C7 ;
 }
 
 .input-group {
@@ -53,12 +53,11 @@ form, .content {
 }
 
 .input-group input {
-  height: 30px;
-  width: 93%;
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid gray;
+  border-color: #0E85C7;
+  border-width: 1px;
+  border-radius: 85px;
+  margin-left: 50vw;
+  transform: translateX(-50%);
 }
 
 .btn {
