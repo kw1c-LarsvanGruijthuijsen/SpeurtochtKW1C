@@ -7,6 +7,7 @@ if (isset($_SESSION['username'])) {
 }
 
 include '../Includes/head.php';
+include '../Includes/header.php'
 ?>
 
 <!DOCTYPE html>
