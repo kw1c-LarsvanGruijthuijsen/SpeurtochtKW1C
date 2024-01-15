@@ -6,6 +6,8 @@ if (!isset($_SESSION['username'])) {
     header('location: ../Login/login.php');
     exit();
 }
+
+include '../Includes/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

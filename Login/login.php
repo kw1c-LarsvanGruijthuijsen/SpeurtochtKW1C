@@ -5,6 +5,8 @@ if (isset($_SESSION['username'])) {
     header('location: ../index.php'); // Redirect if already logged in
     exit();
 }
+
+include '../Includes/head.php';
 ?>
 
 <!DOCTYPE html>
