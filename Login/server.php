@@ -37,31 +37,35 @@ if (isset($_POST['login_user'])) {
             $user = sqlsrv_fetch_array($selectUserStmt, SQLSRV_FETCH_ASSOC);
 
             if ($user) {
-                if ($user['IsLoggedIn'] == 1) {
-                    array_push($errors, "User is already logged in");
-                } else {
-                    // Set IsLoggedIn to 1
-                    $updateLoginStatusSql = "UPDATE Users SET IsLoggedIn = 1 WHERE UserID = ? AND IsLoggedIn = 0";
-                    $updateLoginStatusParams = array($user['UserID']);
-                    $updateLoginStatusStmt = sqlsrv_query($conn, $updateLoginStatusSql, $updateLoginStatusParams);
-
-                    if ($updateLoginStatusStmt === false || sqlsrv_rows_affected($updateLoginStatusStmt) === 0) {
-                        // If the update affected 0 rows, someone else may have already updated the status
-                        array_push($errors, "Failed to update login status: User may already be logged in");
+                if (password_verify($password, $user['PasswordHash'])) { // Verify password
+                    if ($user['IsLoggedIn'] == 1) {
+                        array_push($errors, "User is already logged in");
                     } else {
-                        // Continue with the rest of the login process
+                        // Set IsLoggedIn to 1
+                        $updateLoginStatusSql = "UPDATE Users SET IsLoggedIn = 1 WHERE UserID = ? AND IsLoggedIn = 0";
+                        $updateLoginStatusParams = array($user['UserID']);
+                        $updateLoginStatusStmt = sqlsrv_query($conn, $updateLoginStatusSql, $updateLoginStatusParams);
 
-                        $_SESSION['username'] = $user['UserName'];
-                        $_SESSION['isAdmin'] = $user['IsAdmin'];
-                        $_SESSION['success'] = "You are now logged in";
-
-                        // Check user role and redirect accordingly
-                        if ($user['IsAdmin']) {
-                            header('location: ../AdminDashboard.php');
+                        if ($updateLoginStatusStmt === false || sqlsrv_rows_affected($updateLoginStatusStmt) === 0) {
+                            // If the update affected 0 rows, someone else may have already updated the status
+                            array_push($errors, "Failed to update login status: User may already be logged in");
                         } else {
-                            header('location: ../UserDashboard.php');
+                            // Continue with the rest of the login process
+
+                            $_SESSION['username'] = $user['UserName'];
+                            $_SESSION['isAdmin'] = $user['IsAdmin'];
+                            $_SESSION['success'] = "You are now logged in";
+
+                            // Check user role and redirect accordingly
+                            if ($user['IsAdmin']) {
+                                header('location: ../AdminDashboard.php');
+                            } else {
+                                header('location: ../UserDashboard.php');
+                            }
                         }
                     }
+                } else {
+                    array_push($errors, "Invalid username or password");
                 }
             } else {
                 array_push($errors, "Invalid username or password");
