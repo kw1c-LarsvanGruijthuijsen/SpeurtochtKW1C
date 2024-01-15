@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
+*{
+    font-family: Oswald;
+}
+
 :root {
     --blue: #0E85C7;
     --red: #ED302F;
@@ -28,6 +32,79 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/* GroepsSelectie */
+.Titel{
+    color: var(--blue);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+h3{
+    color: var(--blue);
+    text-align: center;
+    margin-top: 40px ;
+    font-size: 24px;
+}
+
+h4{
+    color: var(--blue);
+    text-align: center;
+    margin-top: 30px ;
+    font-size: 20px;
+}
+
+.textbox{
+    border-color: var(--blue);
+    width: 250px;
+    border-width: 2px;
+    border-radius: 85px;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.textbox-klein{
+    border-color: var(--blue);
+    width: 200px;
+    border-width: 2px;
+    border-radius: 85px;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.textbox:focus {
+    border-width: 3px;
+    outline-color: var(--blue);
+}
+
+.textbox-klein:focus {
+    border-width: 3px;
+    outline-color: var(--blue);
+}
+
+.extra-naam-knop {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    text-align: center;
+    justify-content: center;
+    padding-top: -15px;
+    padding-left:-5 ;
+    padding-bottom:-5 ;
+    padding-right:-5 ;
+    margin-left: 29vw;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    font-size: 24px;
+    line-height: 1; /* Adjust the line-height value as needed */
+}
+
+
 
 /*nav admin page*/
 .custom-width {
