@@ -10,6 +10,10 @@
     --white: #FFFFFF;
 }
 
+body {
+    margin: 0;
+}
+
 /*header*/
 .custom-header {
     background-color: var(--blue);
@@ -34,77 +38,70 @@
 }
 
 /* GroepsSelectie */
-.Titel{
-    color: var(--blue);
-    text-align: center;
-    font-size: 40px;
-    margin-top: 100px;
-    font-weight: bold;
-}
-
-h3{
-    color: var(--blue);
-    text-align: center;
-    margin-top: 40px ;
-    font-size: 24px;
-}
-
-h4{
-    color: var(--blue);
-    text-align: center;
-    margin-top: 30px ;
-    font-size: 20px;
-}
-
-.textbox{
-    border-color: var(--blue);
-    width: 250px;
-    border-width: 2px;
-    border-radius: 85px;
-    margin-left: 50vw;
-    transform: translateX(-50%);
+.form-container {
     text-align: center;
 }
 
-.textbox-klein{
-    border-color: var(--blue);
-    width: 200px;
-    border-width: 2px;
-    border-radius: 85px;
-    margin-left: 50vw;
-    transform: translateX(-50%);
-    text-align: center;
+.form-container input {
     margin-bottom: 10px;
 }
 
-.textbox:focus {
-    border-width: 3px;
-    outline-color: var(--blue);
+.group-container{
+    margin-top: 100px;
 }
 
-.textbox-klein:focus {
-    border-width: 3px;
-    outline-color: var(--blue);
+.form-container h2,
+.form-container p {
+    color: var(--blue);
+    font-weight: bold;
 }
 
-.extra-naam-knop {
-    background-color: var(--blue);
-    color: var(--white);
-    border: none;
-    text-align: center;
+.form-container input[type="text"] {
+    width: 300px; /* Set the width for Groepsnaam */
+    border: 2px solid var(--blue); /* Set the border color */
+    color: blue; /* Set the text color */
+    border-radius: 50px;
+    margin: 0 auto; /* Center the input horizontally */
+}
+
+.form-container .mb-3 input[type="text"] {
+    width: 250px; /* Set the width for Leerlingen input fields */
+    display: block;
+
+}
+
+
+.form-control{
     justify-content: center;
-    padding-top: -15px;
-    padding-left:-5 ;
-    padding-bottom:-5 ;
-    padding-right:-5 ;
-    margin-left: 29vw;
-    transform: translateX(-50%);
-    border-radius: 15px;
-    font-size: 24px;
-    line-height: 1; /* Adjust the line-height value as needed */
+    align-items: center;
 }
 
+.groupbtn{
+    border-radius: 50px;
+    width: 150px;
+}
 
+.circle-container {
+    width: 30px;
+    height: 30px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -14.25vw;
+}
+
+.circle-container i {
+    color: var(--white);
+}
+
+.group-next{
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 50px;
+    width: 150px;
+}
 
 /*nav admin page*/
 #welcome{
