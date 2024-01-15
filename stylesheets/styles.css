@@ -10,7 +10,7 @@
 .custom-header {
     background-color: var(--blue);
     padding: 10px 0;
-    color: white;
+    color: var(--white);
     text-align: center;
     margin-left: -15px;
     margin-right: -15px;
@@ -30,6 +30,10 @@
 }
 
 /*nav admin page*/
+#welcome{
+
+}
+
 .custom-width {
     width: 90%;
 }
