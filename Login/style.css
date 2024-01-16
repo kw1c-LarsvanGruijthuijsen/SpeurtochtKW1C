@@ -4,6 +4,7 @@
 }
 
 body {
+  font-family: Oswald;
   font-size: 120%;
   background: #FFFFFF;
 }
@@ -33,41 +34,78 @@ body {
   
 }
 
+
+
 form, .content {
-  width: 30%;
-  margin: 0px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 0px 0px 10px 10px;
+  text-align: center;
+  margin-top: 50px;
   color:#0E85C7 ;
-}
 
-.input-group {
-  margin: 10px 0px 10px 0px;
-}
 
-.input-group label {
-  display: block;
-  text-align: left;
-  margin: 3px;
-}
 
-.input-group input {
-  border-color: #0E85C7;
-  border-width: 1px;
+
+
+.textbox{
+  border-color: var(--blue);
+  width: 250px;
+  border-width: 2px;
   border-radius: 85px;
-  margin-left: 50vw;
-  transform: translateX(-50%);
+ text-align: center;
+
 }
 
+
+
+.textbox:focus {
+  border-width: 3px;
+  outline-color: var(--blue);
+}
+
+.h1, h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+
+.loginForm {
+  text-align: center;
+
+  margin-bottom: 20px;
+  border: 2px solid var(--blue);
+  /*Blueborder*/border-radius: 20px;
+  /*Roundedcorners*/padding: 10px;
+
+}
+
+/* Add border and rounded corners to form elements */
+.form-control {
+
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 275px;
+  border: 2px solid var(--blue);
+  /*Blueborderforinputfields*/border-radius: 20px;
+  color:var(--blue) !important;
+  /* margin-left:47vw;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%); */
+}
+
+/* Add border and rounded corners to buttons */
 .btn {
-  padding: 10px;
-  font-size: 15px;
-  color: white;
-  /*Login banground color*/
-  background: #0E84C6;
-  border: none;
-  border-radius: 5px;
+  margin-top: 20px;
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  /*Blueborderforbuttons*/border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+
 }
 
 .error {

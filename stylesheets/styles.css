@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
+*{
+    font-family: Oswald;
+}
+
 :root {
     --blue: #0E85C7;
     --red: #ED302F;
