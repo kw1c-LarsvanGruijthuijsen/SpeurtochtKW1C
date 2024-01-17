@@ -51,8 +51,8 @@ include '../Includes/head.php';
             <!-- Move the logout button above the reset button -->
             <li class="nav-item">
                 <form method="post" action="../Login/logout.php">
-                    <button type="submit" class="nav-link rounded-pill px-3 py-2 mb-4 text-white bg-primary d-flex justify-content-center align-items-center w-100">
-                        Logout
+                    <button type="submit" name="logout" class="rounded-pill px-3 py-2 mb-4 bg-primary justify-content-center align-items-center w-100">
+                        Loguit
                     </button>
                 </form>
             </li>
