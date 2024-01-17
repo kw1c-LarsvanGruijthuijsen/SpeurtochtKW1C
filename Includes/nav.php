@@ -21,7 +21,7 @@ include '../Includes/head.php';
 <div class="d-flex flex-row">
 
     <!-- Navigation bar -->
-    <nav class="navbar navbar-dark flex-column custom-navbar">
+    <nav class="navbar flex-column custom-navbar fixed-top" style="margin-top: 5.41vh;">
         <h1 id="welcome">Welcome, <?php echo $_SESSION['username']; ?>!</h1>
         <span class="navbar-brand custom-navbar-brand mb-4">Overzicht</span>
 
