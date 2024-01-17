@@ -10,6 +10,7 @@ include 'head.php';
 
     </style>
 </head>
+<!-- Header bar -->
 <div class="container-fluid">
     <div class="row">
         <div class="col">
