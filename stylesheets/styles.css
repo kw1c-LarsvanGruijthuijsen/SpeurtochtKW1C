@@ -71,15 +71,9 @@ body {
 }
 
 
-.form-control{
-    justify-content: center;
-    align-items: center;
-}
 
-.groupbtn{
-    border-radius: 50px;
-    width: 150px;
-}
+
+
 
 .circle-container {
     width: 30px;
@@ -89,7 +83,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -14.25vw;
 }
 
 .circle-container i {
@@ -129,3 +122,37 @@ body {
 .active-link {
     color: var(--red) !important;
 }
+
+/*admin group page*/
+.blue-box {
+    background-color: var(--blue);
+}
+
+.blue-heading {
+    color: var(--white) !important;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table thead th {
+    background-color: var(--white); /* Blue color */
+    color: var(--blue); /* White text color */
+}
+
+
+@media (max-width: 699px) {
+    .circle-container {
+        margin-left: 108px; /* Reset margin for smaller screens */
+    }
+}
+
+
+
