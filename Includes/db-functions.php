@@ -19,7 +19,7 @@ function db_connect() {
     $conn = sqlsrv_connect($serverName, $connectionOptions);
 
     if ($conn) {
-        // Connection established successfully
+//        echo 'Connection established successfully';
         return $conn;
     } else {
         // Connection failed
