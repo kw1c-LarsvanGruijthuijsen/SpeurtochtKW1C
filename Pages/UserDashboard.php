@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = sqlsrv_query($conn, $sql, $params);
 
         if ($stmt) {
-            $successMessage = 'Group and members inserted successfully.';
+            // $successMessage = 'Group and members inserted successfully.';
+            header('location: UserDashBoard/Question1.php');
+            exit();
         } else {
             $errorMessage = 'Error inserting group and members.';
         }

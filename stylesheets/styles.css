@@ -155,4 +155,72 @@ body {
 }
 
 
+.btn-check:not(:checked) + .btn-secondary {
+    background-color: #0E85C7;
+    border-color: #0E85C7;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    width: 273px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
 
+  .btn-check:checked + .btn-secondary {
+    background-color: #ED302F;
+    border-color: #ED302F;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    width: 273px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.content-container .btn-secondary {
+    text-align: left;
+    padding-left: 20px; /* Adjust padding as needed */
+  }
+
+  .radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the radio button */
+  }
+
+  #QuestionText{
+    width: 70vw;
+    margin-left: 50vw;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+
+}
+
+
+  .content-container {
+    margin-top: 50px;
+  }
+
+  .btn-primary {
+    margin-bottom: 40px;
+    width: 107px;
+    background-color: #ED302F;
+    border-color: #ED302F;
+    border-radius: 50px;
+  }
+
+  .BasicText, .HeadText{
+    color: #0E85C7;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .HeadText{
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
