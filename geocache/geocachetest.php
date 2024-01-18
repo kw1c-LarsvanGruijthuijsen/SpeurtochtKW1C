@@ -15,16 +15,17 @@
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
 
-            document.getElementById('location-info').innerHTML = Your current location: ${latitude}, ${longitude};
+            document.getElementById('location-info').innerHTML = 'Your current location: ' + latitude + ', ' + longitude;
 
-            // You can now use these coordinates to check against your predefined locations and trigger the quiz.
+
+    </script>            // You can now use these coordinates to check against your predefined locations and trigger the quiz.
             // For simplicity, let's log the coordinates to the console.
             console.log('Current Coordinates:', latitude, longitude);
         }
 
         // Function to handle geolocation error
         function errorCallback(error) {
-            document.getElementById('location-info').innerHTML = Error getting location: ${error.message};
+            document.getElementById('location-info').innerHTML = 'Error getting location: ' + error.message;
         }
 
         // Options for geolocation (optional)
@@ -36,6 +37,5 @@
 
         // Requesting geolocation
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
-    </script>
 </body>
 </html>
