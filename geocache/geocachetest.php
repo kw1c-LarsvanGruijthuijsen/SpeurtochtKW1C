@@ -8,34 +8,32 @@
 <body>
     <h1>Walking Route with Quiz</h1>
     <p id="location-info">Waiting for location...</p>
-
     <script>
-        // Function to handle successful geolocation retrieval
-        function successCallback(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
+    function successCallback(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
 
-            document.getElementById('location-info').innerHTML = 'Your current location: ' + latitude + ', ' + longitude;
+        document.getElementById('location-info').innerHTML = 'Your current location: ' + latitude + ', ' + longitude;
 
+        console.log('Current Coordinates:', latitude, longitude);
+    }
 
-    </script>            // You can now use these coordinates to check against your predefined locations and trigger the quiz.
-            // For simplicity, let's log the coordinates to the console.
-            console.log('Current Coordinates:', latitude, longitude);
-        }
+    function errorCallback(error) {
+        document.getElementById('location-info').innerHTML = 'Error getting location: ' + error.message;
+    }
 
-        // Function to handle geolocation error
-        function errorCallback(error) {
-            document.getElementById('location-info').innerHTML = 'Error getting location: ' + error.message;
-        }
+    const options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+    };
 
-        // Options for geolocation (optional)
-        const options = {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0
-        };
+    // Requesting continuous geolocation updates
+    const watchId = navigator.geolocation.watchPosition(successCallback, errorCallback, options);
 
-        // Requesting geolocation
-        navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
-</body>
+    // To stop watching the position (optional)
+    // navigator.geolocation.clearWatch(watchId);
+</script>
+    
+        </body>
 </html>
