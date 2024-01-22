@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geolocation Example</title>
 </head>
-<body>
     <h1>Walking Route with Quiz</h1>
     <p id="location-info">Waiting for location...</p>
 
@@ -17,8 +16,7 @@
 
             document.getElementById('location-info').innerHTML = 'Your current location: ' + latitude + ', ' + longitude;
 
-
-    </script>            // You can now use these coordinates to check against your predefined locations and trigger the quiz.
+            // You can now use these coordinates to check against your predefined locations and trigger the quiz.
             // For simplicity, let's log the coordinates to the console.
             console.log('Current Coordinates:', latitude, longitude);
         }
@@ -37,5 +35,9 @@
 
         // Requesting geolocation
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
+
+
+    </script>
+
 </body>
 </html>
