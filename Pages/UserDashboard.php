@@ -3,42 +3,32 @@ include '../Includes/head.php';
 include '../Includes/header.php';
 ?>
 
+<!-- Add a container element to display fetched content -->
+<div id="contentContainer"></div>
+
 <script>
-    // Function to fetch content from the specified URL and update the target container
-    function fetchContent(url, targetContainer) {
-        fetch(url)
+    // Function to fetch and display content
+    function fetchAndDisplayContent(page) {
+        fetch(`User/${page}.php`)
             .then(response => response.text())
-            .then(content => {
-                targetContainer.innerHTML = content;
+            .then(data => {
+                // Display the fetched content in the container
+                document.getElementById('contentContainer').innerHTML = data;
             })
             .catch(error => console.error('Error fetching content:', error));
     }
 
-    // Function to load the initial page
-    function loadInitialPage() {
-        const initialPageContainer = document.getElementById('content-container');
-        fetchContent('User/GroupCreation.php', initialPageContainer);
-    }
-
-    // Function to load pages in a specific order
-    function loadPagesInOrder() {
-        const order = [
-            'Page1.php',
-            'Page2.php',
-            // Add more pages in the desired order
-        ];
-
-        order.forEach(page => {
-            const pageContainer = document.getElementById('content-container');
-            fetchContent('User/' + page, pageContainer);
-        });
-    }
-
-    // Fetch and load the initial page on page load
-    document.addEventListener('DOMContentLoaded', function () {
-        loadInitialPage();
-        // Uncomment the line below if you also want to load other pages in a specific order on page load
-        // loadPagesInOrder();
+    // Fetch content from GroupCreation.php and display it when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        fetchAndDisplayContent('GroupCreation');
     });
+
+    // Example: You can add event listeners or other logic to fetch content from other pages based on user interactions
+    // document.getElementById('someButton').addEventListener('click', function() {
+    //     fetchAndDisplayContent('SomeOtherPage');
+    // });
 </script>
 
+<?php
+// Add any additional content or scripts for the UserDashboard.php file
+?>
