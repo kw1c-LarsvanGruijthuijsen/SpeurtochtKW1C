@@ -11,10 +11,7 @@ include '../Includes/header.php';
 
 ?>
 
-<!DOCTYPE html>
-<html>
 <head>
-    <title>Registration system PHP and MySQL</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -54,4 +51,3 @@ include '../Includes/header.php';
     </div>
 </div>
 </body>
-</html>
