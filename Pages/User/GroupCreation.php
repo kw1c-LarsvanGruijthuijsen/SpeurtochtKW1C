@@ -1,7 +1,6 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include '../Includes/header.php';
 
 $serverName = "172.16.20.93";
 $database = "DbSpeurtocht";
